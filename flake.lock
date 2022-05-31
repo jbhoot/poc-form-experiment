@@ -1,0 +1,101 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1653856454,
+        "narHash": "sha256-/U6IiL7Ywhm8pABm2VHGYJ0UvV9rVAcPlXm40OG/16A=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "37792e5766ced355c8c93140a108950300b67fe1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "inputs": {
+        "flake-utils": [
+          "repoMelange",
+          "flake-utils"
+        ],
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1653867233,
+        "narHash": "sha256-M5dr7ZT1AbURGixK9fLWnZLD4F9O5cY9mHnJtfk5oTI=",
+        "owner": "anmonteiro",
+        "repo": "nix-overlays",
+        "rev": "a1d46c5c2c9b23f43ebb21fadbe5c7e9a95e9cd1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anmonteiro",
+        "repo": "nix-overlays",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1653750779,
+        "narHash": "sha256-yQ5bsgAnUMS/MB2uRi+RANcXtlNENYp5+CZNvDVGxFo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fa66e6d444f37c80d973d75fd3e0d28e286d8ea4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fa66e6d444f37c80d973d75fd3e0d28e286d8ea4",
+        "type": "github"
+      }
+    },
+    "repoMelange": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1653892603,
+        "narHash": "sha256-F+TmMQRq5OFEdwSm5NheyiygPeyGawI2YxICq7TUw1s=",
+        "owner": "melange-re",
+        "repo": "melange",
+        "rev": "53a354a69172629033ce63d2d8eb9d8ea7ad1cdc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "melange-re",
+        "ref": "fork",
+        "repo": "melange",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "repoMelange": "repoMelange"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
