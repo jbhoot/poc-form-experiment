@@ -2,7 +2,7 @@
 (subdir ./src
 (rule
 (targets  Main.ast)
- (deps (:inputs  Main.re) )
+ (deps (:inputs  Main.res) )
 (action
  (run melc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
 (enabled_if %{bin-available:melc}) )
@@ -15,7 +15,7 @@
 (targets  Main.cmj Main.cmi Main.cmt Main.bs.js)
  (deps (:inputs  Main.ast)  (include Main.d) ../bsconfig.json)
 (action
-  (run melc -bs-re-out -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Main.cmj %{inputs}))
+  (run melc -I .    -w a -bs-package-name melange-basic-project -bs-package-output commonjs:./src:.bs.js -o Main.cmj %{inputs}))
 (enabled_if %{bin-available:melc}) )
  (rule
 (targets  Hello.ast)
